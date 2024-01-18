@@ -130,13 +130,15 @@ function Accounts() {
                     <div className='line-item'>{account.creationDate}</div>
                 </NavLink>
             ))}
-            <div className='pagination-wrapp'>
-                <button className={numPage < 2 ? 'pagination-item pagination-item-noactive' : 'pagination-item'} onClick={() => ChangePagesLeft()}>{'<'}</button>
-                {[...Array(totalPages)].map((_, index) => (
-                    <button className={(index + 1) === numPage ? 'pagination-item pagination-item-active' : 'pagination-item'} key={index} onClick={() => ChangePages(index)}>{index + 1}</button>
-                ))}
-                <button className={numPage < totalPages ? 'pagination-item' : 'pagination-item pagination-item-noactive'} onClick={() => ChangePagesRight()}>{'>'}</button>
-            </div>
+            {totalPages > 1 && (
+                <div className='pagination-wrapp'>
+                    <button className={numPage < 2 ? 'pagination-item pagination-item-noactive' : 'pagination-item'} onClick={() => ChangePagesLeft()}>{'<'}</button>
+                    {[...Array(totalPages)].map((_, index) => (
+                        <button className={(index + 1) === numPage ? 'pagination-item pagination-item-active' : 'pagination-item'} key={index} onClick={() => ChangePages(index)}>{index + 1}</button>
+                    ))}
+                    <button className={numPage < totalPages ? 'pagination-item' : 'pagination-item pagination-item-noactive'} onClick={() => ChangePagesRight()}>{'>'}</button>
+                </div>
+            )}
         </div>
     );
 }
