@@ -73,7 +73,7 @@ function Campaigns() {
         <div className='page-wrapp'>
             <div className='navlink-wrapp'>
                 <div className='navlink'>
-                    <NavLink to={'/accounts'} className='navlink-item'>to accounts</NavLink>
+                    <NavLink to={'/'} className='navlink-item'>to accounts</NavLink>
                 </div>
                 <div className='navlink'>
                     <NavLink to={`/profiles?accountId=${accountId}`} className='navlink-item'>to profiles</NavLink>

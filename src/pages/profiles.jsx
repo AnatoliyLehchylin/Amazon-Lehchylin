@@ -76,7 +76,7 @@ function Profiles() {
 
     return (
         <div className='page-wrapp'>
-            <NavLink to={'/accounts'} className='navlink-profile navlink'>to accounts</NavLink>
+            <NavLink to={'/'} className='navlink-profile navlink'>to accounts</NavLink>
             <div className='title'>Profiles</div>
             <div className='title-description'>(accountId: <span className='span-number'>{accountId}</span>)</div>
 
